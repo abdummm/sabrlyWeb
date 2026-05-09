@@ -61,7 +61,7 @@
             Made on Earth by Humans
         </p>
         <img src="Resources/linkedin_logo.svg" style="width:16px; height: 16px; fill: black" alt="Linkedin logo">
-        <a href="https://linkedin.com/in/abdummm" target="_blank"
+        <a  href="https://linkedin.com/in/abdummm" target="_blank"
            style="font-family: -apple-system, BlinkMacSystemFont, sans-serif; color: black;">LinkedIn</a>
         <img src="Resources/github-logo.svg" style="width:16px; height: 16px; fill: black" alt="Github logo">
         <a href="https://github.com/abdummm" target="_blank"
@@ -91,5 +91,16 @@
     });
     document.getElementById('download_for_windows').addEventListener('click', () => {
         gtag('event', 'download_for_windows_clicked');
+    });
+    document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (link.href === "https://linkedin.com/in/abdummm") {
+                gtag('event', 'web_linkedin_clicked');
+            } else if (link.href === "https://github.com/abdummm") {
+                gtag('event', 'web_github_clicked');
+            } else if (link.href === "mailto:sabrlydev@gmail.com") {
+                gtag('event', 'web_sabrly_dev_mail_clicked');
+            }
+        });
     });
 </script>
