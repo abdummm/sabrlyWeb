@@ -86,4 +86,10 @@
     gtag('js', new Date());
 
     gtag('config', 'G-MS1BCDSNXQ');
+    document.getElementById('download_for_mac').addEventListener('click', () => {
+        gtag('event', 'download_for_mac_clicked');
+    });
+    document.getElementById('download_for_windows').addEventListener('click', () => {
+        gtag('event', 'download_for_windows_clicked');
+    });
 </script>
